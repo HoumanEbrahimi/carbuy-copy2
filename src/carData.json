@@ -1,0 +1,111 @@
+{
+    "carData":[
+    {
+        "id":"1",
+        "imagePath": "https://tesla-cdn.thron.com/delivery/public/thumbnail/tesla/cd32a56b-2a29-453b-bbae-a39480766cd9/bvlatuR/std/590x506/Model3_01?lcid=1e84026d-2319-4378-b5bd-22fa4c980c22&v=25&dpr=113",
+        "title": "Tesla Model 3 Performance",
+        "model year": "2022",
+        "trim": "standard",
+        "model": "Model 3",
+        "Brand": "tesla",
+        "Dealership":"https://www.tesla.com/en_ca/model3",
+        "email":"houman.ebrahimi@mail.utoronto.ca"
+    
+    }
+    ,{
+        "id":"2",
+        "imagePath":"https://tesla-cdn.thron.com/delivery/public/thumbnail/tesla/2b585eac-984d-4ca3-8cc5-31d437f695fd/bvlatuR/std/590x506/models_01?lcid=2b084dd2-ade1-49ec-a470-45363112146c&v=47&dpr=113",
+        "title": "Tesla model S",
+        "model year": "2022",
+        "trim": "Plaid",
+        "Brand": "tesla",
+        "model": "Model S",
+        "Dealership":"https://www.tesla.com/en_ca/models",
+        "email":"houman.ebrahimi@mail.utoronto.ca"
+
+  
+    },{
+        "id":"3",
+        "imagePath":"https://tesla-cdn.thron.com/delivery/public/thumbnail/tesla/e73bce04-c568-4d61-bb40-9ad0dfdb5d4c/bvlatuR/std/590x506/ModelX_02?lcid=9511c1b4-08d9-4f10-a6a0-83734ffd00f1&v=31&dpr=113",
+        "title": "Tesla model X",
+        "model year": "2022",
+        "trim": "Standard Plus",
+        "Brand": "tesla",
+        "model": "Model X",
+        "Dealership":"https://www.tesla.com/en_ca/modelx",
+        "email":"houman.ebrahimi@mail.utoronto.ca"
+
+  
+    },
+    {
+      "id":"4",
+      "imagePath":"https://nafta.starconnect-ce.i.mercedes-benz.com/iris/iris.png?COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtle9tsd2HdcUfp8qXGEubmJ0l3ItOB2NQnbApjdpI5uVcZQC3qkWkzNRL6m7jZ6qhKVFKF%25vq9UTyLRDO6Yax7aYrH1KMrn8wvVwoiZUbEM4FGTlTg906V6PDMLoSeWzy3tsd7BdcUfi%256XGE4nSJ0lgDfOB2PSObApe7yI5uKMTQmIJwF1%25u6PDL%25pSeWvantsdPsdcUfeUqXGE1JBJ0lB0tOB2A8cbA4wHEcmqN1IwClbM35pnIu2fzzjFm93Su9Q6DF1s1n2nvligKfLlCVzU5Ug4FGHi9h&&BKGND=9&IMGT=P27&POV=be040%2Cpzm&crop=0,0,1920,1150&width=2880&height=1725",
+      "title": "Mercedes C300",
+      "model year": "2022",
+      "trim": "standard",
+      "Brand": "mercedes-benz",
+      "model": "C-Class",
+      "Dealership":"https://www.mercedes-benz.ca/en/vehicles/model/c-class/sedan/c300w4",
+      "email":"houman.ebrahimi@mail.utoronto.ca"
+
+
+    },
+    {
+      "id":"5",
+      "imagePath":"https://img.sm360.ca/ir/w640h480/images/article/spinelli/106028//rx_20231666199973631.jpg",
+      "title": "Lexus RX350",
+      "model year": "2023",
+      "trim": "Luxuty Package",
+      "Brand": "lexus",
+      "model": "RX",
+      "Dealership":"https://www.lexus.ca/lexus/en/automobiles/rx",
+      "email":"houman.ebrahimi@mail.utoronto.ca"
+
+
+    },
+    {
+      "id":"6",
+      "imagePath":"https://s3.amazonaws.com/lexus.site.lexus/tci-prod/lexus/media/build/rx/col/big/b23_bamcat_fl2_0223_p.png?ck=12192022052643",
+      "title": "Lexus RX350",
+      "model year": "2023",
+      "trim": "Luxuty Package",
+      "Brand": "lexus",
+      "model": "RX",
+      "Dealership":"https://www.lexus.ca/lexus/en/automobiles/rx",
+      "email":"houman.ebrahimi@mail.utoronto.ca"
+
+
+    }
+    ,
+    {
+      "id":"7",
+      "imagePath":"https://s3.amazonaws.com/lexus.site.lexus/tci-prod/lexus/media/build/rx/col/big/b23_bamcat_fl2_0223_p.png?ck=12192022052643",
+      "title": "Volkswagon Arteon",
+      "model year": "2023",
+      "trim": "Luxuty Package",
+      "Brand": "Volkswagon",
+      "model": "Arteon",
+      "Dealership":"https://www.lexus.ca/lexus/en/automobiles/rx",
+      "email":"houman.ebrahimi@mail.utoronto.ca"
+
+
+    }
+    ,
+    {
+      "id":"8",
+      "imagePath":"https://s3.amazonaws.com/lexus.site.lexus/tci-prod/lexus/media/build/rx/col/big/b23_bamcat_fl2_0223_p.png?ck=12192022052643",
+      "title": "BMW M3",
+      "model year": "2021",
+      "trim": "M Package",
+      "Brand": "BMW",
+      "model": "3-Series",
+      "Dealership":"https://www.lexus.ca/lexus/en/automobiles/rx",
+      "email":"houman.ebrahimi@mail.utoronto.ca"
+
+
+    }
+
+
+
+    ]}
+ 
