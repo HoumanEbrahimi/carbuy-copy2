@@ -12,30 +12,25 @@ const Bookmarks = () => {
     const storedFav = JSON.parse(localStorage.getItem('fav')) || [];
     setFav(storedFav);
   }, []);
-  /*
-  useEffect(() => {
-    const handleBeforeUnload = (event) => {
-      // Set a flag in session storage to indicate the window is being closed
-      sessionStorage.setItem('isClosing', 'true');
-    };
 
-    const handleUnload = () => {
-      if (sessionStorage.getItem('isClosing') === 'true') {
-        console.log('Window closed');
-        localStorage.removeItem('fav'); // Clear 'fav' from local storage
-      }
-      sessionStorage.removeItem('isClosing'); // Clean up the flag
-    };
+  window.onbeforeunload = function() {
+    console.log("bruh")
+    localStorage.clear();
+ }
 
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    window.addEventListener('unload', handleUnload);
+ // useEffect(() =>{
+ //         const handleBeforeUnload = () => {
+ //   localStorage.removeItem('fav');
+ // };
 
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-      window.removeEventListener('unload', handleUnload);
-    };
-  }, []);
-  */
+ // window.addEventListener('beforeunload', handleBeforeUnload);
+
+ // return () => {
+ //   window.removeEventListener('beforeunload', handleBeforeUnload);
+ // };
+//}, []);
+
+  
 
   return (
     <div>
