@@ -95,7 +95,7 @@ const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
 
   const handleNotInterested = (carId) => {
     try {
-      const updatedSearchResults = searchResults.filter(car => car.id !== carId);
+      const updatedSearchResults = searchResults.filter(car => car.title !== carId);
       setSearchResults(updatedSearchResults);
       setFilteredResults(updatedSearchResults);
     } catch (error) {

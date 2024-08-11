@@ -17,16 +17,6 @@ function App() {
   const [searchResults, setSearchResults] = useState([carData]);
   const [filteredResults, setFilteredResults] = useState([]);
 
-  //  const handleBeforeUnload = () => {
-  //    localStorage.removeItem('fav');
-  //  };
-
-  //window.addEventListener('beforeunload', handleBeforeUnload);
-
-  //  return () => {
-  //    window.removeEventListener('beforeunload', handleBeforeUnload);
-  //  };
-  //}, []);
 
   return (
     <div className="App">
