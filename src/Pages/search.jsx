@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import carData from '../carData.json';
-import carModel from '../carModel.json';
+import carModel from '../carBrand.json';
 import './search.css';
 
 const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
@@ -77,15 +77,19 @@ const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
   const handleBrandChange = (event) => {
     const selectedBrand = event.target.value;
     setFilters({ ...filters, brand: selectedBrand });
-    console.log("get brand from title",searchResults.filter(car=>car.title), "bruh",selectedBrand,"another one",searchResults.filter(car=>car.title.includes(selectedBrand)))
     if (selectedBrand ==='') {
       setFilteredResults(searchResults);
     } else {
-      const filtered = searchResults.filter(car => car.title.toLowerCase().includes(selectedBrand));
-      setFilteredResults(filtered.length > 0 ? filtered : []);
+      console.log("get brand from title",searchResults.filter(car=>car.title), "bruh",selectedBrand,"another one",searchResults.filter(car=>car.title.includes(selectedBrand)))
+      const filtered = searchResults.filter(car => car.title.includes(selectedBrand));
+      console.log("lets go",filtered)
+      setFilteredResults(filtered)
+      //setFilteredResults(searchResults.filter(car => car.title.toLowerCase().includes(selectedBrand)) > 0 ? filtered : []);
+      console.log("double check",filtered.length)
+
     }
 
-    const index = carModel.findIndex(car => car.brand.toLowerCase() === selectedBrand.toLowerCase());
+    const index = carModel.findIndex(car => car.name.toLowerCase() === selectedBrand.toLowerCase());
     setBrandInfo(index); // Update brandInfo state
 
     //brandInfo = carModel.findIndex(car => car.brand.toLowerCase() === selectedBrand);
@@ -140,7 +144,7 @@ const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
           <div className="popup-menu">
             <select onChange={handleBrandChange} value={filters.brand}>
               <option value="">Select a brand</option>
-              {Array.from(new Set(carData.carData.map(car => car.Brand))).map((brand, index) => (
+              {Array.from(new Set(carModel.map(car => car.name))).map((brand, index) => (
                 <option key={index} value={brand}>{brand}</option>
               ))}
             </select>
