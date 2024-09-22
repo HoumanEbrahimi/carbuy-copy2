@@ -31,7 +31,7 @@ const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
             throw new Error('Network response was not ok');
           }
           const data = await response.json();
-          console.log(data); // Log the data to verify the response
+          //console.log(data); // Log the data to verify the response
           setSearchResults(data);
           setFilteredResults(data);
         } catch (error) {
@@ -44,7 +44,7 @@ const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
   }, [searchResults.length, setSearchResults]);
   
 
-  console.log("search results",searchResults.length)
+  //console.log("search results",searchResults.length)
   /*
   useEffect(() => {
     if (carData && carData.carData) {
@@ -77,11 +77,11 @@ const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
   const handleBrandChange = (event) => {
     const selectedBrand = event.target.value;
     setFilters({ ...filters, brand: selectedBrand });
-
+    console.log("get brand from title",searchResults.filter(car=>car.title), "bruh",selectedBrand,"another one",searchResults.filter(car=>car.title.includes(selectedBrand)))
     if (selectedBrand ==='') {
       setFilteredResults(searchResults);
     } else {
-      const filtered = searchResults.filter(car => car.Brand.toLowerCase() === selectedBrand.toLowerCase());
+      const filtered = searchResults.filter(car => car.title.toLowerCase().includes(selectedBrand));
       setFilteredResults(filtered.length > 0 ? filtered : []);
     }
 
