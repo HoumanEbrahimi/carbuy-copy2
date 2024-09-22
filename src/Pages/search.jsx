@@ -23,10 +23,10 @@ const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
   }
   
   useEffect(() => {
-    if (searchResults.length === 1) {
+    if (searchResults.length <=1) {
       const fetchCarData = async () => {
         try {
-          const response = await fetch('http://127.0.0.1:5000/api/cars');
+          const response = await fetch('http://localhost:5000/api/cars');
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
@@ -162,7 +162,11 @@ const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
             <div key={car.id} className="card mb-3">
               <div className="row no-gutters">
                 <div className="col-md-4">
-                  <img src={car.imagePath} className="card-img" alt={car.title} />
+                {car.image_urls && car.image_urls.length > 0 ? (
+                    <img src={car.image_urls[0]} style={{ objectFit: "contain" }} className="card-img" alt={car.title} />
+                  ) : (
+                    <p>No image available</p>
+                  )}
                 </div>
                 <div className="col-md-8">
                   <div className="card-body">

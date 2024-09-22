@@ -47,3 +47,15 @@
     font-size: 18px;
     color: red;
 }
+
+.image-container {
+    width: 300px; /* Specify the desired width of the container */
+    height: 300px; /* Specify the desired height of the container */
+    overflow: hidden; /* To hide any overflowed content */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cover, contain, fill, etc. */
+  }
