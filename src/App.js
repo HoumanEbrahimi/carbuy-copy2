@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap/js/src/collapse.js";
 import SearchCars from './Pages/search';
 import Bookmarks from './Pages/bookmarks.jsx';
-import Recommandaion from './Pages/recommandation';
+import Recommandaion from './Pages/recommandation.jsx';
 import React, { useState, useEffect } from 'react';
 import carData from './carData.json';
 import Contact from './Pages/contact';
@@ -58,6 +58,7 @@ function App() {
           <Route path="/" element={<div />} />
           <Route path="/items" element={<SearchCars fav={fav} setFav={setFav} searchResults={searchResults} setSearchResults={setSearchResults} />} />
           <Route path="/bookmarks" element={<Bookmarks fav={fav} />} />
+          <Route path="/recommandation" element={<Recommandaion fav={fav} />} />
         </Routes>
       </BrowserRouter>
     </div>
