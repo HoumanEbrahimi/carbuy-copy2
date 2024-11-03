@@ -48,7 +48,7 @@ function App() {
                 <Link className="nav-link" to="/bookmarks">Bookmarks</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/projects">Contact Us</Link>
+                <Link className="nav-link" to="/recommandation">Recommandaions</Link>
               </li>
             </ul>
           </div>
