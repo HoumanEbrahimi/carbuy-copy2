@@ -48,7 +48,7 @@ const Bookmarks = () => {
                   <h5 className="card-title">{car.title}</h5>
                   <p className="card-text">{car.trim}</p>
                   <button onClick={() => removeBookmark(car.id)} className="btn btn-danger">
-                    Remove
+                    Remove Car
                   </button>
                 </div>
               </div>
