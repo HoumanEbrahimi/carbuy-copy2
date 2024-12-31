@@ -3,12 +3,16 @@ import { useNavigate } from 'react-router';
 import carData from '../carData.json';
 import carModel from '../carBrand.json';
 import './search.css';
+import { useUserAuth } from "./UserAuthContextProvider";
+import { db } from "./firebase";
+import { collection, getDocs, query, where, addDoc, deleteDoc, doc } from "firebase/firestore";
 
 const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
   const [filters, setFilters] = useState({ brand: '' });
   const [popUp, setPopUp] = useState(false);
   const [modelPopup,setModelPopUp]=useState(false)
   const [filteredResults, setFilteredResults] = useState([]);
+   const { user } = useUserAuth();
  
   const navigate = useNavigate();
 
@@ -106,16 +110,19 @@ const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
       console.error(error);
     }
   };
-  const handleInterested = (carTitle) => {
+  const handleInterested = async (carTitle) => {
     try {
       const carToBookmark = searchResults.find(car => car.title === carTitle);
-      if (!carToBookmark) {
-        throw new Error(`Car with title ${carTitle} not found`);
-      }
-      const updatedBookmarks = [...fav, carToBookmark];
-      setFav(updatedBookmarks);
-      localStorage.setItem('fav', JSON.stringify(updatedBookmarks));
-
+      if (!carToBookmark) throw new Error(`Car with title ${carTitle} not found`);
+      
+      const bookmarkData = {
+        ...carToBookmark,
+        userId: user.uid,
+      };
+      
+      const docRef = await addDoc(collection(db, "bookmarks"), bookmarkData);
+      setFav([...fav, { id: docRef.id, ...bookmarkData }]);
+  
       const updatedSearchResults = searchResults.filter(car => car.title !== carTitle);
       setSearchResults(updatedSearchResults);
       setFilteredResults(updatedSearchResults);
@@ -123,6 +130,7 @@ const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
       console.error(error);
     }
   };
+  
   
   const handleModel = (isDisabled) =>{
 

@@ -9,6 +9,7 @@ const Recommendation = () => {
   // Load bookmarked cars from localStorage
   useEffect(() => {
     const storedFav = JSON.parse(localStorage.getItem('fav')) || [];
+    console.log("wow"+storedFav)
     setFav(storedFav);
   }, []);
 
