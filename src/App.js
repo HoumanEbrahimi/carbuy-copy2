@@ -15,6 +15,7 @@ import UserAuthContextProvider from "./Pages/UserAuthContextProvider";
 import { useUserAuth } from "./Pages/UserAuthContextProvider";
 import { useNavigate } from "react-router-dom";
 import { BookmarksProvider } from "./Pages/BookmarksContext";
+import CarCard from "./Pages/carCard.jsx";  
 import carData from "./carData.json";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/js/src/collapse.js";
@@ -122,6 +123,7 @@ function App() {
                     />
                     <Route path="/bookmarks" element={<Bookmarks fav={fav} />} />
                     <Route path="/recommandation" element={<Recommandaion fav={fav} />} />
+                    <Route path="/car/:id" element={<CarCard />} />
                   </Routes>
                 </Col>
               </Row>

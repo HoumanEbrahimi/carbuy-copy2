@@ -41,7 +41,7 @@ const Bookmarks = () => {
           >
             <div className="row no-gutters">
               <div className="col-md-4">
-                <img src={car.imagePath} className="card-img" alt={car.title} />
+                <img src={car.image_urls[0]} className="card-img" alt={car.title} />
               </div>
               <div className="col-md-8">
                 <div className="card-body">
