@@ -4,6 +4,9 @@
 			"path": "../../build"
 		},
 		{
+			"path": "../../node_modules"
+		},
+		{
 			"path": "../../public"
 		},
 		{

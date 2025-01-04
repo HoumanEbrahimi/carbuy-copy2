@@ -48,7 +48,7 @@ const Search = ({ fav, setFav, searchResults, setSearchResults}) => {
   }, [searchResults.length, setSearchResults]);
   
 
-  //console.log("search results",searchResults.length)
+  console.log("search results",searchResults)
   /*
   useEffect(() => {
     if (carData && carData.carData) {
