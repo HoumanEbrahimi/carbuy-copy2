@@ -13,13 +13,12 @@ const CarCard = () =>{
     function getKeyByValue(object, value) {
         var keys = Object.keys(card);
         return card[keys].title
-        
     }
 
     function returnImage(object, value) {
         var keys = Object.keys(card);
         console.log("my "+card[keys].image_urls);
-        return card[keys].image_urls;
+        return card[keys].image_urls[0];
     }   
 
     const value = getKeyByValue(card,card.title);
@@ -28,11 +27,11 @@ const CarCard = () =>{
     
     return(
         <div className="body_search">
-        <h2 className="section" >
         <h2>{value}</h2>
+        {images.map((image) => (
+        <img src={image} alt={value} />
 
-              
-        </h2>
+        ))}
         </div>
     )
     
