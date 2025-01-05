@@ -32,6 +32,10 @@ const Bookmarks = () => {
     navigate(`/car/${car.id}`, { state: { car } });
   }
 
+  for (let k in fav){
+    console.log("get car info"+fav[k].image_urls)
+
+  }
   return (
     <div>
       <h2>Bookmarked Cars</h2>
